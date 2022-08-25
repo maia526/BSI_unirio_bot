@@ -31,17 +31,19 @@ def ajuda(update: Update, context: CallbackContext):
 def desconhecido(update: Update, context: CallbackContext):
     update.message.reply_text(
         "Desculpe, '%s' não é um comando válido." % update.message.text)
+
 # mensagem que aparece se o usuário digitar algo que não é um comando
 
 
 def texto_desconhecido(update: Update, context: CallbackContext):
     update.message.reply_text(
         "Desculpe, eu não entendi, você falou: '%s'" % update.message.text)
+
+
 # mensagem com o calendário academico
-
-
 def calendario_mensagem(update: Update, context: CallbackContext):
-    update.message.reply_text('\n\n'.join(retorna_lista_datas()), parse_mode='html')
+    update.message.reply_text('\n\n'.join(
+        retorna_lista_datas()), parse_mode='html')
 
 
 def retorna_lista_datas():
@@ -54,7 +56,7 @@ def retorna_lista_datas():
     resultado = []  # lista de strings das linhas da tabela
     for i in range(0, len(dados), 2):
         resultado.append(
-            ('<b>'+dados[i].text +'</b>' + ': ' + dados[i + 1].text.strip()).strip())
+            ('<b>'+dados[i].text + '</b>' + ': ' + dados[i + 1].text.strip()).strip())
     # cada elemento da lista é uma linha da tabela
     return resultado
 
