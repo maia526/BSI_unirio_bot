@@ -13,8 +13,6 @@ updater = Updater("5589909898:AAGo3Bwcy2hZ6P6DrM0FSbQDxlg24tGptok",
                   use_context=True)
 
 # mensagem de boas vindas que aparece quando o usuário iniciar a interação com o bot
-
-
 def start(update: Update, context: CallbackContext):
     update.message.reply_text(
         "O BSI_unirio_bot te dá boas vindas! Digite /ajuda para ver os comandos disponíveis.")
@@ -33,8 +31,6 @@ def desconhecido(update: Update, context: CallbackContext):
         "Desculpe, '%s' não é um comando válido." % update.message.text)
 
 # mensagem que aparece se o usuário digitar algo que não é um comando
-
-
 def texto_desconhecido(update: Update, context: CallbackContext):
     update.message.reply_text(
         "Desculpe, eu não entendi, você falou: '%s'" % update.message.text)
