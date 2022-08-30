@@ -27,6 +27,10 @@ def start(update: Update, context: CallbackContext):
 # A ALTERAR
 
 
+# enviando o fluxograma
+def envia_fluxograma(update: Update, context: CallbackContext):
+    update.message.reply_photo('https://bsi.uniriotec.br/wp-content/uploads/sites/31/2020/06/fluxograma.png')
+
 def ajuda(update: Update, context: CallbackContext):
     update.message.reply_text("Your Message")
 
@@ -89,6 +93,8 @@ updater.dispatcher.add_handler(
 
 updater.dispatcher.add_handler(CommandHandler(
     'atualiza_calendario', atualiza_calendario))
+
+updater.dispatcher.add_handler(CommandHandler('fluxograma', envia_fluxograma))
 
 updater.dispatcher.add_handler(MessageHandler(Filters.text, desconhecido))
 
