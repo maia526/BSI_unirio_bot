@@ -31,10 +31,6 @@ def start(update: Update, context: CallbackContext):
 def envia_fluxograma(update: Update, context: CallbackContext):
     update.message.reply_photo('https://bsi.uniriotec.br/wp-content/uploads/sites/31/2020/06/fluxograma.png')
 
-def ajuda(update: Update, context: CallbackContext):
-    update.message.reply_text("Your Message")
-
-
 # mensagem que aparece se usuário digitar comando inválido
 def desconhecido(update: Update, context: CallbackContext):
     update.message.reply_text(
@@ -95,9 +91,6 @@ def capivara(update: Update, context: CallbackContext):
 
 # se usuário digitar o que está no primeiro parâmetro, a função do segundo parâmetro é rodada
 updater.dispatcher.add_handler(CommandHandler('start', start))
-
-#comando de ajuda
-updater.dispatcher.add_handler(CommandHandler('ajuda', ajuda))
 
 #envia calendario academico, se houver arquivo .csv
 updater.dispatcher.add_handler(
