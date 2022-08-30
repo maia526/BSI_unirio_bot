@@ -7,7 +7,7 @@ from telegram.ext.callbackcontext import CallbackContext
 from telegram.ext.commandhandler import CommandHandler
 from telegram.ext.messagehandler import MessageHandler
 from telegram.ext.filters import Filters
-
+from datetime import datetime, timedelta
 import requests as re
 from bs4 import BeautifulSoup
 import csv
@@ -82,19 +82,33 @@ def retorna_lista_datas():
     # cada elemento da lista é uma linha da tabela
     return resultado
 
+#retorna quandos dias faltam para o fim de 2022.2
+def countdown(update: Update, context: CallbackContext):
+    final = datetime.strptime('2023-02-13', '%Y-%m-%d')
+    hoje = datetime.now()
+    timedelta = final - hoje
+    update.message.reply_text(f"Faltam {timedelta.days} dias para o fim de 2022.2!")
+
 
 # se usuário digitar o que está no primeiro parâmetro, a função do segundo parâmetro é rodada
 updater.dispatcher.add_handler(CommandHandler('start', start))
 
+#comando de ajuda
 updater.dispatcher.add_handler(CommandHandler('ajuda', ajuda))
 
+#envia calendario academico, se houver arquivo .csv
 updater.dispatcher.add_handler(
     CommandHandler('calendario', calendario_mensagem))
 
+# atualiza ou cria arquivo .csv com o calendario
 updater.dispatcher.add_handler(CommandHandler(
     'atualiza_calendario', atualiza_calendario))
 
+#envia o fluxograma
 updater.dispatcher.add_handler(CommandHandler('fluxograma', envia_fluxograma))
+
+# envia quantos dias faltam para o último dia do período
+updater.dispatcher.add_handler(CommandHandler('falta', countdown))
 
 updater.dispatcher.add_handler(MessageHandler(Filters.text, desconhecido))
 
