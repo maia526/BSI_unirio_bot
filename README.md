@@ -1,5 +1,5 @@
 # &#x1f4CB; Descrição do Projeto
-<img src="imagens/demo.gif">
+<img src="imagens/demo.gif" width=300>
 
 Este projeto não é, de forma alguma, relacionada à Escola de Informática aplicada ou à UNIRIO. É apenas um projeto de dois estudantes de Sistemas de Informação que reuniram informações mais buscadas pelos alunos num lugar de fácil acesso.
 
