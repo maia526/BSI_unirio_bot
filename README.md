@@ -3,6 +3,8 @@
 
 Este projeto não é, de forma alguma, relacionada à Escola de Informática aplicada ou à UNIRIO. É apenas um projeto de dois estudantes de Sistemas de Informação que reuniram informações mais buscadas pelos alunos num lugar de fácil acesso.
 
+Disponível em: t.me/BSI_unirio_bot
+
 # Comandos
 ## &#x231a; `\horarios`
 O comando `\horarios` envia o horário de cada disciplina obrigatória e optativa de BSI armazenada em `horarios.txt`.
