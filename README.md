@@ -16,6 +16,11 @@ Apesar de estar disponível, não se recomenda utilizar  o `\atualiza_calendario
 ## &#x1f9fe; `\fluxograma`
 Envia uma imagem com o fluxograma do curso. Será alterado com o novo currículo num futuro breve.
 
+## &#x23f3; `\falta`
+Envia quantos dias faltam para acabar o período letivo atual com base no último dia do calendário acadêmico atual
+<br>
+<br>
+
 # &#x1f916; Tecnologias utilizadas
 <ul>
     <li>Linguagem Python</li>
