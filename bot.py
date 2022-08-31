@@ -17,7 +17,7 @@ updater = Updater("5589909898:AAGo3Bwcy2hZ6P6DrM0FSbQDxlg24tGptok",
 # mensagem de boas vindas que aparece quando o usuário iniciar a interação com o bot
 def start(update: Update, context: CallbackContext):
     update.message.reply_text(
-        "O BSI_unirio_bot te dá boas vindas! Digite /ajuda para ver os comandos disponíveis.")
+        "O BSI_unirio_bot te dá boas vindas! Acesse o menu ou apenas digite / para ver comandos.")
 
 
 # enviando o fluxograma
