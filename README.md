@@ -14,14 +14,14 @@ Apesar de estar disponível, não se recomenda utilizar  o `\atualiza_calendario
 ## &#x1f9fe; `\fluxograma`
 Envia uma imagem com o fluxograma do curso. Será alterado com o novo currículo num futuro breve.
 
-## &#x1f916; Tecnologias utilizadas
+# &#x1f916; Tecnologias utilizadas
 <ul>
     <li>Linguagem Python</li>
     <li>python-telegram-bot</li>
     <li>Beautiful Soup 4</li>
 </ul>
 
-## &#x1f468; &#x1f469; Autores
+# &#x1f468; &#x1f469; Autores
  | [<img src="https://avatars.githubusercontent.com/u/96018595?v=4" width=150><br><sub>Mariana Maia</sub>](https://github.com/maia526) | [<img src="https://avatars.githubusercontent.com/u/39502131?v=4" width=150><br><sub>Mateus Evangelista</sub>](https://github.com/matEvangelista) |
  | :---------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------: |
 
