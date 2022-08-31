@@ -28,5 +28,5 @@ Envia uma imagem com o fluxograma do curso. Será alterado com o novo currículo
 <br><br><br><br><br>         
           
 
-<center><img src="https://pbs.twimg.com/media/FOkigT_XwAgQAM_?format=jpg&name=small" width=100 position="center"></center>
+<center><img src="https://pbs.twimg.com/media/FOkigT_XwAgQAM_?format=jpg&name=small" alt="capivara" width=100 position="center"></center>
  
