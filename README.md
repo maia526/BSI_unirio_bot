@@ -5,7 +5,7 @@ Este projeto não é, de forma alguma, relacionada à Escola de Informática apl
 
 Disponível em: t.me/BSI_unirio_bot
 
-# Comandos
+# &#x1f4ac; Comandos
 ## &#x231a; `\horarios`
 O comando `\horarios` envia o horário de cada disciplina obrigatória e optativa de BSI armazenada em `horarios.txt`.
 ## &#x1f4c5; `\calendario`
