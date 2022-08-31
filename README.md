@@ -3,7 +3,7 @@
 
 Este projeto não é, de forma alguma, relacionada à Escola de Informática aplicada ou à UNIRIO. É apenas um projeto de dois estudantes de Sistemas de Informação que reuniram informações mais buscadas pelos alunos num lugar de fácil acesso.
 
-Disponível em: t.me/BSI_unirio_bot
+Disponível em: <a href="https://t.me/BSI_unirio_bot">t.me/BSI_unirio_bot</a>
 
 # &#x1f4ac; Comandos
 ## &#x231a; `\horarios`
