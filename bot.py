@@ -16,34 +16,30 @@ import csv
 updater = Updater("5589909898:AAGo3Bwcy2hZ6P6DrM0FSbQDxlg24tGptok",
                   use_context=True)
 
+
 # mensagem de boas vindas que aparece quando o usuário iniciar a interação com o bot
-
-
 def start(update: Update, context: CallbackContext):
     update.message.reply_text(
         "O BSI_unirio_bot te dá boas vindas! Digite /ajuda para ver os comandos disponíveis.")
 
-# mensagem com os comandos que o bot aceita (ex.: calendario, horarios...)
-# A ALTERAR
-
 
 # enviando o fluxograma
 def envia_fluxograma(update: Update, context: CallbackContext):
-    update.message.reply_photo('https://bsi.uniriotec.br/wp-content/uploads/sites/31/2020/06/fluxograma.png')
-
-def ajuda(update: Update, context: CallbackContext):
-    update.message.reply_text("Your Message")
+    update.message.reply_photo(
+        'https://bsi.uniriotec.br/wp-content/uploads/sites/31/2020/06/fluxograma.png')
 
 
-# mensagem que aparece se usuário digitar comando inválido
-def desconhecido(update: Update, context: CallbackContext):
-    update.message.reply_text(
-        "Desculpe, '%s' não é um comando válido." % update.message.text)
+# capivara
+def capivara(update: Update, context: CallbackContext):
+    update.message.reply_photo(
+        'https://pbs.twimg.com/media/FOkigT_XwAgQAM_?format=jpg&name=small')
 
-# mensagem que aparece se o usuário digitar algo que não é um comando
-def texto_desconhecido(update: Update, context: CallbackContext):
-    update.message.reply_text(
-        "Desculpe, eu não entendi, você falou: '%s'" % update.message.text)
+
+# mensagem com os horarios por período
+def horarios(update: Update, context:CallbackContext):
+    with open('horarios.txt', encoding='utf-8') as arq:
+        linhas = arq.readlines()
+        update.message.reply_text(''.join(linhas), parse_mode='html')
 
 
 # mensagem com o calendário academico
@@ -51,21 +47,25 @@ def calendario_mensagem(update: Update, context: CallbackContext):
     try:
         with open('calendario.csv', encoding='utf-8') as arq:
             leitor = csv.reader(arq, delimiter=',')
-            lista_do_csv = list(leitor) # transforma o arquivo lido em uma lista
+            # transforma o arquivo lido em uma lista
+            lista_do_csv = list(leitor)
         lista_do_csv = [': '.join(linha) for linha in lista_do_csv]
         update.message.reply_text('\n\n'.join(lista_do_csv), parse_mode='html')
     except:
-        update.message.reply_text('Calendario não atualizado. Digite /atualiza_calendario para obtê-lo')
-        
+        update.message.reply_text(
+            'Calendario não atualizado. Digite /atualiza_calendario para obtê-lo')
+
 
 # funcao para guardar os dados lidos do HTML em um arquivo csv
 def atualiza_calendario(update: Update, context: CallbackContext):
-    update.message.reply_text('Aguarde alguns segundos enquanto o calendario atualiza...')
+    update.message.reply_text(
+        'Aguarde alguns segundos enquanto o calendario atualiza...')
     with open('calendario.csv', 'w', encoding='UTF8', newline='') as arq:
         escritor = csv.writer(arq)
         for linha in retorna_lista_datas():
             escritor.writerow(linha)
-    update.message.reply_text('Calendario atualizado com sucesso! Digite /calendario para vê-lo')
+    update.message.reply_text(
+        'Calendario atualizado com sucesso! Digite /calendario para vê-lo')
 
 
 def retorna_lista_datas():
@@ -82,21 +82,20 @@ def retorna_lista_datas():
     # cada elemento da lista é uma linha da tabela
     return resultado
 
-#retorna quandos dias faltam para o fim de 2022.2
+
+# retorna quandos dias faltam para o fim de 2022.2
 def countdown(update: Update, context: CallbackContext):
     final = datetime.strptime('2023-02-13', '%Y-%m-%d')
     hoje = datetime.now()
     timedelta = final - hoje
-    update.message.reply_text(f"Faltam {timedelta.days} dias para o fim de 2022.2!")
+    update.message.reply_text(
+        f"Faltam {timedelta.days} dias para o fim de 2022.2!")
 
 
 # se usuário digitar o que está no primeiro parâmetro, a função do segundo parâmetro é rodada
 updater.dispatcher.add_handler(CommandHandler('start', start))
 
-#comando de ajuda
-updater.dispatcher.add_handler(CommandHandler('ajuda', ajuda))
-
-#envia calendario academico, se houver arquivo .csv
+# envia calendario academico, se houver arquivo .csv
 updater.dispatcher.add_handler(
     CommandHandler('calendario', calendario_mensagem))
 
@@ -104,18 +103,16 @@ updater.dispatcher.add_handler(
 updater.dispatcher.add_handler(CommandHandler(
     'atualiza_calendario', atualiza_calendario))
 
-#envia o fluxograma
+# envia o fluxograma
 updater.dispatcher.add_handler(CommandHandler('fluxograma', envia_fluxograma))
 
 # envia quantos dias faltam para o último dia do período
 updater.dispatcher.add_handler(CommandHandler('falta', countdown))
 
-updater.dispatcher.add_handler(MessageHandler(Filters.text, desconhecido))
+# envia capivara
+updater.dispatcher.add_handler(CommandHandler('capivara', capivara))
 
-updater.dispatcher.add_handler(MessageHandler(
-    Filters.command, desconhecido))  # filtra comandos desconhecidos
-
-updater.dispatcher.add_handler(MessageHandler(
-    Filters.text, texto_desconhecido))  # filtra mensagens desconhecidas
+# envia horarios
+updater.dispatcher.add_handler(CommandHandler('horarios', horarios))
 
 updater.start_polling()

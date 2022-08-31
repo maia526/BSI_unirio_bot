@@ -1,0 +1,49 @@
+<b>Primeiro Período</b>
+
+DPW - Segunda e quarta das 14h às 16h
+TP1 - Segunda e quarta das 16h às 18h e sexta das 14h às 16h
+OC - Terça e quinta das 14h às 16h
+FSI - Terça e quinta das 16h às 18h
+MB - Quinta das 18h às 20h
+TPD - Sexta das 16h às 20h
+
+<b>Segundo Período</b>
+
+ILC - Segunda e quarta das 14h às 16h
+CDL - Segunda e quarta das 16h às 18h
+AL - Terça e quinta das 14h às 16h
+TP2 - Terça e quinta das 16h às 18h e sexta das 14h às 16h
+AEA - Sexta das 16h às 20h
+
+<b>Terceiro Período</b>
+
+EDC - Segunda e quarta das 14h às 16h
+CDI2 - Segunda e quarta das 16h às 18h
+SO - Segunda e quarta das 18h às 20h
+BD1 - Terça e quinta das 14h às 16h
+ED1 - Terça e quinta das 16h às 18h e sexta das 14h às 16h
+PROB - Sexta das 16h às 20h
+
+<b>Quarto Período</b>
+AS - Segunda e quarta das 16h às 18h
+LFA - Segunda e quarta das 18h às 20h
+ED2 - Segunda e quarta das 20h às 22h
+IHC - Terça e quinta das 16h às 18h
+ESTAT - Terça e quinta das 20h às 22h
+RC1 - Sexta das 18h às 22h
+
+<b>Quinto Período</b>
+EMP - Segunda e quarta das 18h às 20h
+RC2 - Segunda e quarta das 20h às 22h
+AA - Terça e quinta das 16h às 18h
+BD2 - Terça e quinta das 20h às 22h
+PCS - Sexta das 18h às 22h
+ACE1 - Assíncrono
+
+<b>Sexto a Oitavo Períodos</b>
+GPI - Segunda e quarta das 18h às 20h
+PCS-SGBD - Segunda e quarta das 20h às 22h
+PM - Terça e quinta das 16h às 18h
+PS - Terça e quinta das 20h às 22h
+AF - Sexta das 18h às 22h
+ACE1, ACE2, ACE3, ACE4, PG1, PG2: Assíncrono
