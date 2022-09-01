@@ -47,3 +47,17 @@ PM - Terça e quinta das 16h às 18h
 PS - Terça e quinta das 20h às 22h
 AF - Sexta das 18h às 22h
 ACE1, ACE2, ACE3, ACE4, PG1, PG2: Assíncrono
+
+<b>Optativas</b>
+FRCR - Segunda e quarta das 16h às 18h
+WS - Segunda e quarta das 18h às 
+GPN - Segunda das 18h às 22h
+ICR - Segunda e quarta das 20h às 22h
+JGCL - Terça de 14h às 18h
+INFENDU - Terça e quinta de 16h às 18h
+TABD2 - Terça e quinta de 18h às 20h
+AP - Terça de 18h às 22h
+IARS - Terça e quinta das 20 às 22h
+PATS - Terça e quinta das 20 às 22h
+HITA - Quinta de 18h às 22h
+CD - Sexta de 14h às 18h
