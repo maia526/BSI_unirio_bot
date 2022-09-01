@@ -13,7 +13,7 @@ O comando `/calendario` envia o calendário acadêmico do período atual, a part
 
 Apesar de estar disponível, não se recomenda utilizar  o `/atualiza_calendario` com frequência, mas apenas quando o calendário for alterado ou em alguma troca de perído.
 
-## &#x1f9fe; `\/luxograma`
+## &#x1f9fe; `/fluxograma`
 Envia uma imagem com o fluxograma do curso. Será alterado com o novo currículo num futuro breve.
 
 ## &#x23f3; `/falta`
