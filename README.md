@@ -6,17 +6,17 @@ Este projeto não é, de forma alguma, relacionada à Escola de Informática apl
 Disponível em: <a href="https://t.me/BSI_unirio_bot">t.me/BSI_unirio_bot</a>
 
 # &#x1f4ac; Comandos
-## &#x231a; `\horarios`
-O comando `\horarios` envia o horário de cada disciplina obrigatória e optativa de BSI armazenada em `horarios.txt`.
-## &#x1f4c5; `\calendario`
-O comando `calendario` envia o calendário acadêmico do período atual, a partir de uma leitura do arquivo `calendario.csv`, que, em sua ausência, pode ser criado através do comando `\atualiza_calendario`, responsável pelo web scraping da página com o calendário acadêmico e seu registro no .csv.
+## &#x231a; `/horarios`
+O comando `/horarios` envia o horário de cada disciplina obrigatória e optativa de BSI armazenada em `horarios.txt`.
+## &#x1f4c5; `/calendario`
+O comando `/calendario` envia o calendário acadêmico do período atual, a partir de uma leitura do arquivo `calendario.csv`, que, em sua ausência, pode ser criado através do comando `/atualiza_calendario`, responsável pelo web scraping da página com o calendário acadêmico e seu registro no .csv.
 
-Apesar de estar disponível, não se recomenda utilizar  o `\atualiza_calendario` com frequência, mas apenas quando o calendário for alterado ou em alguma troca de perído.
+Apesar de estar disponível, não se recomenda utilizar  o `/atualiza_calendario` com frequência, mas apenas quando o calendário for alterado ou em alguma troca de perído.
 
-## &#x1f9fe; `\fluxograma`
+## &#x1f9fe; `\/luxograma`
 Envia uma imagem com o fluxograma do curso. Será alterado com o novo currículo num futuro breve.
 
-## &#x23f3; `\falta`
+## &#x23f3; `/falta`
 Envia quantos dias faltam para acabar o período letivo atual com base no último dia do calendário acadêmico atual
 <br>
 <br>
