@@ -1,5 +1,6 @@
 from ast import parse
 from encodings.utf_8 import encode
+from urllib import request
 from telegram.ext.updater import Updater
 from telegram.update import Update
 from telegram.ext.callbackcontext import CallbackContext
@@ -33,7 +34,7 @@ def capivara(update: Update, context: CallbackContext):
 
 
 # mensagem com os horarios por período
-def horarios(update: Update, context:CallbackContext):
+def horarios(update: Update, context: CallbackContext):
     with open('horarios.txt', encoding='utf-8') as arq:
         linhas = arq.readlines()
         update.message.reply_text(''.join(linhas), parse_mode='html')
@@ -88,6 +89,20 @@ def countdown(update: Update, context: CallbackContext):
     update.message.reply_text(
         f"Faltam {timedelta.days} dias para o fim de 2022.2!")
 
+# bandejao
+def bandejao(update: Update, context: CallbackContext):
+    try:
+        url = 'http://www.unirio.br/prae/nutricao-prae-1/setan/restaurante-escola'
+        r = re.get(url)
+        soup = BeautifulSoup(r.text, 'html.parser')
+        imgs = soup.find_all('a', {"class": 'internal-link'})
+        for img in imgs:
+            if ('cardapio' in img['href']):
+                update.message.reply_photo(img['href'])
+                break
+    except:
+        pass
+
 
 # se usuário digitar o que está no primeiro parâmetro, a função do segundo parâmetro é rodada
 updater.dispatcher.add_handler(CommandHandler('start', start))
@@ -111,5 +126,8 @@ updater.dispatcher.add_handler(CommandHandler('capivara', capivara))
 
 # envia horarios
 updater.dispatcher.add_handler(CommandHandler('horarios', horarios))
+
+# envia bandejao
+updater.dispatcher.add_handler(CommandHandler('bandejao', bandejao))
 
 updater.start_polling()
